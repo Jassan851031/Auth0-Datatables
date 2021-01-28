@@ -12,7 +12,6 @@ var authRouter = require('./routes/auth');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var userTable = require('./routes/table');
-var dataTable = require('./server/table.users');
 
 dotenv.config();
 
@@ -98,7 +97,6 @@ app.use('/', authRouter);
 app.use('/', indexRouter);
 app.use('/', usersRouter);
 app.use('/', userTable);
-app.use('/', dataTable);
 
 // Catch 404 and forward to error handler
 app.use(function (req, res, next) {
